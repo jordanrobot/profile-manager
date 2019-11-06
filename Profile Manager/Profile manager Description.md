@@ -82,11 +82,13 @@ User options?
 		- Gets each Project reference from the Projects list and saves it to Inventor
 		- mechanism: Application.DesignProjects.AddExisting( FullFileName As String )
 
+
 Options
 ===
 
 Look at using Inventor's Application.___Options as basis for grouping my options in the ApplicationOptions object?
 Use an interface to define the basic structure of each?
+Or write a clone/deep-copy method, and clone each ___Options object and use clone as the data-source for later recall?
 
 * ContentCenterOptions
 * DisplayOptions
@@ -101,3 +103,26 @@ Use an interface to define the basic structure of each?
 * SaveOptions
 * Sketch3DOptions
 * SketchOptions
+
+Rough design for a deep copy example?  Use inheritence or composition for the Clone method?
+
+* IOptionObject
+	+ DeepOptionObject As Object
+	- CurrentOptionObject As Object
+	---
+	+ New (CurrentOptionObject As Object) :
+	+ Clone (CurrentOptionObject As Object) : DeepOptionObject
+	+ GetOptions (CurrentOptionObject)
+	+ SetOptions (CurrentOptionObject)
+
+* ContentCenterOptionsProfile : IOptionObject
+	* DeepOptionObject As ContentCenterOptions
+	* CurrentOptionsObject As ContentCenterOptions
+	---
+	+ New (CurrentOptionobject)
+	+ Clone
+	+ SetOptions(CurrentOptionObject)
+		- ThisApplication.ContentCenterOptions.SetAccessOption = DeepOptionObject.GetAccessOption
+		- ThisApplication.ContentCenterOptions.CheckFamiliesUpdates = DeepOptionObject.CheckFamiliesUpdates
+		- ThisApplication.ContentCenterOptions.CustomFamilyAsStandard = DeepOptionObject.CustomFamilyAsStandard
+		- ThisApplication.ContentCenterOptions.RefreshOutOfDateStandardParts = DeepOptionObject.RefreshOutOfDateStandardParts
