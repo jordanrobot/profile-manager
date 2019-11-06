@@ -90,23 +90,19 @@ Look at using Inventor's Application.___Options as basis for grouping my options
 Use an interface to define the basic structure of each?
 Or write a clone/deep-copy method, and clone each ___Options object and use clone as the data-source for later recall?
 
-* ContentCenterOptions
-	- ThisApplication.ContentCenterOptions.SetAccessOption = DeepOptionObject.GetAccessOption
-	- ThisApplication.ContentCenterOptions.CheckFamiliesUpdates = DeepOptionObject.CheckFamiliesUpdates
-	- ThisApplication.ContentCenterOptions.CustomFamilyAsStandard = DeepOptionObject.CustomFamilyAsStandard
-	- ThisApplication.ContentCenterOptions.RefreshOutOfDateStandardParts = DeepOptionObject.RefreshOutOfDateStandardParts
-* DisplayOptions
-* DrawingOptions
-* FileOptions
-* GeneralOptions
-* HardwareOptions
-* iFeatureOptions
-* InventorVBAProjects???
-* NotebookOptions
-* PartOptions
-* SaveOptions
-* Sketch3DOptions
-* SketchOptions
+* [X] ContentCenterOptions
+* [ ] DisplayOptions
+* [ ] DrawingOptions
+* [ ] FileOptions
+* [X] GeneralOptions
+* [ ] HardwareOptions
+* [ ] iFeatureOptions
+* [ ] InventorVBAProjects???
+* [ ] NotebookOptions
+* [ ] PartOptions
+* [ ] SaveOptions
+* [ ] Sketch3DOptions
+* [ ] SketchOptions
 
 
 * IOptionObject
