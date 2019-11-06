@@ -95,6 +95,7 @@
     <Compile Include="StandardAddInServer.vb" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Profile Manager Description.md" />
     <None Include="Profile Manager.X.manifest" />
   </ItemGroup>
   <ItemGroup>
