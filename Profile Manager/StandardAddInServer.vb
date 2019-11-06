@@ -21,7 +21,7 @@ Namespace Profile_Manager
         ' Declaration of the button definition with events to handle the click event.
         ' For additional commands this declaration along with other sections of code
         ' that apply to the button can be duplicated from this example.
-        Private WithEvents m_sampleButton As ButtonDefinition
+        Private WithEvents m_profileManagerButton As ButtonDefinition
 
 
 #Region "ApplicationAddInServer Members"
@@ -44,7 +44,7 @@ Namespace Profile_Manager
                 '*********************************************************************************
 
                 ' Create the button definition using the CreateButtonDefinition function to simplify this step.
-                m_sampleButton = Utilities.CreateButtonDefinition("Command" & vbCr & "Name", "niftyCommandID", "", "ButtonResources\SampleButton")
+                m_profileManagerButton = Utilities.CreateButtonDefinition("Profile Manager", "OpenProfileManager", "", "ButtonResources\SampleButton")
 
                 ' Add to the user interface, if it's the first time.
                 ' If this add-in doesn't have a UI but runs in the background listening
@@ -61,7 +61,7 @@ Namespace Profile_Manager
         ' unloaded either manually by the user or when the Inventor session is terminated.
         Public Sub Deactivate() Implements Inventor.ApplicationAddInServer.Deactivate
             ' Release objects.
-            m_sampleButton = Nothing
+            m_profileManagerButton = Nothing
             m_uiEvents = Nothing
             g_inventorApplication = Nothing
 
@@ -113,8 +113,8 @@ Namespace Profile_Manager
             End If
 
             ' Add a button.
-            If Not m_sampleButton Is Nothing Then
-                customPanel.CommandControls.AddButton(m_sampleButton, True)
+            If Not m_profileManagerButton Is Nothing Then
+                customPanel.CommandControls.AddButton(m_profileManagerButton, True)
             End If
         End Sub
 
@@ -124,8 +124,8 @@ Namespace Profile_Manager
         End Sub
 
         ' Sample handler for the button.
-        Private Sub m_sampleButton_OnExecute(Context As NameValueMap) Handles m_sampleButton.OnExecute
-            CommandFunctions.SampleCommandFunction()
+        Private Sub m_profileManagerButton_OnExecute(Context As NameValueMap) Handles m_profileManagerButton.OnExecute
+            CommandFunctions.startProfileManager()
         End Sub
 #End Region
 
