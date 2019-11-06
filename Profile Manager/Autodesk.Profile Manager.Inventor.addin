@@ -1,0 +1,14 @@
+<Addin Type="Standard">
+  <!--Created for Autodesk Inventor 2018 (Version 22.0)-->
+  <ClassId>{0e2dd136-7bbd-4220-83b7-26f21069ee0a}</ClassId>
+  <ClientId>{0e2dd136-7bbd-4220-83b7-26f21069ee0a}</ClientId>
+  <DisplayName>Profile_Manager</DisplayName>
+  <Description>Profile_Manager</Description>
+  <Assembly>Profile_Manager.dll</Assembly>
+  <LoadOnStartUp>1</LoadOnStartUp>
+  <UserUnloadable>1</UserUnloadable>
+  <Hidden>0</Hidden>
+  <SupportedSoftwareVersionGreaterThan>21..</SupportedSoftwareVersionGreaterThan>
+  <DataVersion>1</DataVersion>
+  <UserInterfaceVersion>1</UserInterfaceVersion>
+</Addin>
