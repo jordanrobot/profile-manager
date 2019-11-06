@@ -22,7 +22,7 @@
     End Sub
 
 
-    Public Sub SaveOptions(ByRef i As Inventor.ContentCenterOptions)
+    Public Sub SetOptions(ByRef i As Inventor.ContentCenterOptions)
 
         'General Options'
         For Each k In Me.options.Keys

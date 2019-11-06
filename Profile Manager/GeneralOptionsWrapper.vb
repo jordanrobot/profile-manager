@@ -49,7 +49,7 @@ Public Class GeneralOptionsWrapper
     End Sub
 
 
-    Public Sub SaveOptions(ByRef i As Object)
+    Public Sub SetOptions(ByRef i As Object)
 
         'General Options'
         For Each k In Me.options.Keys
