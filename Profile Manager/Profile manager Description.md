@@ -83,12 +83,8 @@ User options?
 		- mechanism: Application.DesignProjects.AddExisting( FullFileName As String )
 
 
-Options
+Option Groups
 ===
-
-Look at using Inventor's Application.___Options as basis for grouping my options in the ApplicationOptions object?
-Use an interface to define the basic structure of each?
-Or write a clone/deep-copy method, and clone each ___Options object and use clone as the data-source for later recall?
 
 * [X] ContentCenterOptions
 * [ ] DisplayOptions
@@ -103,13 +99,3 @@ Or write a clone/deep-copy method, and clone each ___Options object and use clon
 * [ ] SaveOptions
 * [ ] Sketch3DOptions
 * [ ] SketchOptions
-
-
-* IOptionObject
-	+ 
-	- 
-	---
-	+ New (CurrentOptionObject As Object) :
-	+ GetOptions (CurrentOptionObject)
-	+ SetOptions (CurrentOptionObject)
-
