@@ -11,6 +11,7 @@ Public Class GeneralOptionsWrapper
 
     Public Sub GetOptions(ByRef i As Object)
         options.Clear()
+        gripSnapOptions.Clear()
 
         Me.options.Add("AnnotationScale", i.AnnotationScale)
         Me.options.Add("EnableLegacyProjectCreation", i.EnableLegacyProjectCreation)
