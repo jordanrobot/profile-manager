@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="CCOptionsWrapper.vb" />
     <Compile Include="GeneralOptionsWrapper.vb" />
     <Compile Include="CommandFunctions.vb" />
     <Compile Include="formMain.Designer.vb">
