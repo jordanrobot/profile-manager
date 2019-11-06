@@ -1,4 +1,4 @@
-Profile mangaer
+Profile manager
 ===
 
 Create an add-in that allows the Inventor User to create settings "profiles".  These are akin to profiles from autocad.  This may be useful for users who are freelance inventor users who have to use the software to match client configurations.
