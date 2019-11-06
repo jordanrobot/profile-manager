@@ -7,6 +7,8 @@
 Public Module CommandFunctions
     ' Example function that's called when the sample command is executed.
     Public Sub startProfileManager()
-        MsgBox("Running """ & g_inventorApplication.Caption & """")
+        'Start up the form
+        Dim formMain As New formMain
+
     End Sub
 End Module
