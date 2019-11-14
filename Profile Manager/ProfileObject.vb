@@ -7,16 +7,15 @@
     Private _DisplayOptions As DisplayOptionsWrapper
     Private _DrawingOption As DrawingOptionsWrapper
     Private _FileOptions As FileOptionsWrapper
-    'Private _FilesOptions As FileOptions
-    'Private _HardwareOptions As HardwareOptions
-    'Private _iFeatureOptions As iFeatureOptions
-    'Private _NotebookOptions As NotebookOptions
-    'Private _PartOptions As PartOptions
-    'Private _SaveOptions As SaveOptions
-    'Private _Sketch3DOptions As Sketch3DOptions
-    'Private _SketchOptions As SketchOptions
-    'Private _IlogicPathSettings As iLogicPathSettings
-    'Private _ProjectOptions As ProjectOptions
+    Private _HardwareOptions As HardwareOptionsWrapper
+    'Private _iFeatureOptions As iFeatureOptionsWrapper
+    'Private _NotebookOptions As NotebookOptionsWrapper
+    'Private _PartOptions As PartOptionsWrapper
+    'Private _SaveOptions As SaveOptionsWrapper
+    'Private _Sketch3DOptions As Sketch3DOptionsWrapper
+    'Private _SketchOptions As SketchOptionsWrapper
+    'Private _IlogicPathSettings As iLogicPathSettingsWrapper
+    'Private _ProjectOptions As ProjectOptionsWrapper
 
     Public Sub New(ByVal Name As String)
 
@@ -31,6 +30,8 @@
         _DisplayOptions.GetOptions(g_inventorApplication)
         _DrawingOption.GetOptions(g_inventorApplication)
         _FileOptions.GetOptions(g_inventorApplication)
+
+        _HardwareOptions.GetOptions(g_inventorApplication)
 
     End Sub
 
