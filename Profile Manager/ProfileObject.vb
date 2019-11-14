@@ -6,6 +6,7 @@
     Private _GeneralOptionsWrapper As GeneralOptionsWrapper
     Private _DisplayOptions As DisplayOptionsWrapper
     Private _DrawingOption As DrawingOptionsWrapper
+    Private _FileOptions As FileOptionsWrapper
     'Private _FilesOptions As FileOptions
     'Private _HardwareOptions As HardwareOptions
     'Private _iFeatureOptions As iFeatureOptions
@@ -29,7 +30,7 @@
         _GeneralOptionsWrapper.GetOptions(g_inventorApplication)
         _DisplayOptions.GetOptions(g_inventorApplication)
         _DrawingOption.GetOptions(g_inventorApplication)
-        g_inventorApplication.
+        _FileOptions.GetOptions(g_inventorApplication)
 
     End Sub
 

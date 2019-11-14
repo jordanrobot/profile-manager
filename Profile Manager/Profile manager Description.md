@@ -89,7 +89,7 @@ Option Groups
 * [X] ContentCenterOptions
 * [X] DisplayOptions
 * [X] DrawingOptions
-* [ ] FileOptions
+* [X] FileOptions
 * [X] GeneralOptions
 * [ ] HardwareOptions
 * [ ] iFeatureOptions
