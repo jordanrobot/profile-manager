@@ -11,4 +11,10 @@ Public Module CommandFunctions
         Dim formMain As New formMain
 
     End Sub
+
+    Public Sub test()
+        If g_inventorApplication.ActiveDocumentType = DocumentTypeEnum.kNoDocument Then
+            MsgBox("there is no document laoded!")
+        End If
+    End Sub
 End Module

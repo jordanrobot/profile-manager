@@ -55,6 +55,8 @@ Namespace Profile_Manager
             Catch ex As Exception
                 MsgBox("Unexpected failure in the activation of the add-in ""Profile_Manager""" & vbCrLf & vbCrLf & ex.Message)
             End Try
+
+            test()
         End Sub
 
         ' This method is called by Inventor when the AddIn is unloaded. The AddIn will be
