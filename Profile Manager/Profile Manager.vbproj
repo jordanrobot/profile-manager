@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E2DD136-7BBD-4220-83B7-26F21069EE0A}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Profile_Manager</RootNamespace>
+    <RootNamespace>ProfileManager</RootNamespace>
     <AssemblyName>Profile Manager</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
@@ -118,8 +118,8 @@
     <None Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ButtonResources\SampleButton\32x32.png" />
-    <None Include="ButtonResources\SampleButton\16x16.png" />
+    <None Include="ProfileManagerButton\SampleButton\32x32.png" />
+    <None Include="ProfileManagerButton\SampleButton\16x16.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="My Project\" />

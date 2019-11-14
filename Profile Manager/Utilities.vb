@@ -48,7 +48,7 @@ Public Module Utilities
         End Try
 
         If Not testDef Is Nothing Then
-            MsgBox("Error when loading the add-in ""Profile_Manager"". A command already exists with the same internal name. Each add-in must have a unique internal name. Change the internal name in the call to CreateButtonDefinition.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Inventor Add-In Template")
+            MsgBox("Error when loading the add-in ""ProfileManager"". A command already exists with the same internal name. Each add-in must have a unique internal name. Change the internal name in the call to CreateButtonDefinition.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Inventor Add-In Template")
             Return Nothing
         End If
 

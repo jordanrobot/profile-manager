@@ -2,9 +2,9 @@ Imports Inventor
 Imports System.Runtime.InteropServices
 Imports Microsoft.Win32
 
-Namespace Profile_Manager
-    <ProgIdAttribute("Profile_Manager.StandardAddInServer"), _
-    GuidAttribute(g_simpleAddInClientID)> _
+Namespace ProfileManager
+    <ProgIdAttribute("ProfileManager.StandardAddInServer"),
+    GuidAttribute(g_simpleAddInClientID)>
     Public Class StandardAddInServer
         Implements Inventor.ApplicationAddInServer
 
@@ -44,7 +44,7 @@ Namespace Profile_Manager
                 '*********************************************************************************
 
                 ' Create the button definition using the CreateButtonDefinition function to simplify this step.
-                m_profileManagerButton = Utilities.CreateButtonDefinition("Profile Manager", "OpenProfileManager", "", "ButtonResources\SampleButton")
+                m_profileManagerButton = Utilities.CreateButtonDefinition("Profile Manager", "OpenProfileManager", "", "ButtonResources\ProfileManagerButton")
 
                 ' Add to the user interface, if it's the first time.
                 ' If this add-in doesn't have a UI but runs in the background listening
@@ -53,7 +53,7 @@ Namespace Profile_Manager
                     AddToUserInterface()
                 End If
             Catch ex As Exception
-                MsgBox("Unexpected failure in the activation of the add-in ""Profile_Manager""" & vbCrLf & vbCrLf & ex.Message)
+                MsgBox("Unexpected failure in the activation of the add-in ""ProfileManager""" & vbCrLf & vbCrLf & ex.Message)
             End Try
 
         End Sub
@@ -104,13 +104,13 @@ Namespace Profile_Manager
             ' Check to see if the "MySample" panel already exists and create it if it doesn't.
             Dim customPanel As RibbonPanel = Nothing
             Try
-                customPanel = toolsTab.RibbonPanels.Item("MySample")
+                customPanel = toolsTab.RibbonPanels.Item("id_buttonProfileManager")
             Catch ex As Exception
             End Try
 
             If customPanel Is Nothing Then
                 ' Create a new panel.
-                customPanel = toolsTab.RibbonPanels.Add("Sample", "MySample", g_addInClientID)
+                customPanel = toolsTab.RibbonPanels.Add("Sample", "id_buttonProfileManager", g_addInClientID)
             End If
 
             ' Add a button.
