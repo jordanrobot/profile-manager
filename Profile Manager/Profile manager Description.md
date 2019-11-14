@@ -95,9 +95,9 @@ Option Groups
 * [X] iFeatureOptions
 * [X] NotebookOptions
 * [ ] PartOptions
-* [ ] SaveOptions
-* [ ] Sketch3DOptions
-* [ ] SketchOptions
+* [X] SaveOptions
+* [X] Sketch3DOptions
+* [X] SketchOptions
 
 Detect User Changes to Application Options
 ===
