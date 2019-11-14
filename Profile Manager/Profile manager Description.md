@@ -87,8 +87,8 @@ Option Groups
 ===
 
 * [X] ContentCenterOptions
-* [ ] DisplayOptions
-* [ ] DrawingOptions
+* [X] DisplayOptions
+* [X] DrawingOptions
 * [ ] FileOptions
 * [X] GeneralOptions
 * [ ] HardwareOptions
@@ -99,3 +99,11 @@ Option Groups
 * [ ] SaveOptions
 * [ ] Sketch3DOptions
 * [ ] SketchOptions
+
+Detect User Changes to Application Options
+===
+
+Create a handler to watch for the Inventor.ApplicationEventsSink_OnApplicationOptionChangeEventHandler event.
+Put this in an object????  RESEARCH HANDLERS MORE!
+Define a "dirty" boolean variable.  When the options change, make this variable True.
+This will let us indicate to the user that the options have been changed since the last save of the currently active Profile.
