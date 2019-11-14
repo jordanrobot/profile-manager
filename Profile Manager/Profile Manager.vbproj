@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="PartOptionsWrapper.vb" />
     <Compile Include="ProfileObject.vb" />
+    <Compile Include="ProfileCollection.vb" />
     <Compile Include="SaveOptionsWrapper.vb" />
     <Compile Include="Sketch3DOptionsWrapper.vb" />
     <Compile Include="SketchOptionsWrapper.vb" />
