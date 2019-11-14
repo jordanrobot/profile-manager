@@ -10,26 +10,40 @@ Create an add-in that allows the Inventor User to create settings "profiles".  T
 	* iLogic Path directories
 * User opens the profile switcher dialogue.
 * User can create and activate a profile for the current setup.
-* Does the user have to explicity save the profile, or do we read the profile at the next load?
-* Changes the user makes will now save to that profile.
+* The user has to explicity save the profile
+* if the user options changes, an event watcher sets a "dirty" flag, this will notify the user that the profile is not saved.
 * The user can change profiles at any time, changing the set of Inventor configuration options.
+* If a file is loaded, we will not be able to change the project files.  Maybe we leave theses alone?
+* look at a way to edit the file name generator settings
+* Opionally, make able to slave/associate to a project?  That way when you change projects, it changes your profile?
+
+
 
 Structure
 ---
 
 user opens the profile manager dialog
 
-where are these profiles stored?  How are they access?
+where are these profiles stored?  How are they accessed?
+	Store into Inventor's options xml file?  Or serialize seperately?
 
 Each is created as a profile object, they are stored in a profile object collection.
 Where is this data stored across user sessions?  How is it serialized?
 User options?
 
+Data Load object
+	+ load data (data): returns a ProfileCollection
+	+ save data (profileCollection): returns a serialized data stream? 
+	Import Profile????
+	Export Profile?????
 
-* ProfileCollection <Collection> or use as generic list of Profile objects?
+[X] ProfileCollection
 	+ Item
 	+ Add
 	+ Remove
+	+ Name (return profile by name)
+
+
 
 
 * Profile <Object>
@@ -49,6 +63,16 @@ User options?
 		- saves the current Inventor User options in the selected profile by...
 		- calling the Set___ methods in each property object, this updates the application options
 		- Returns a boolean to indicate the status of the operation
+
+		User interaction:
+			Create New
+			Duplicate
+			Delete
+			Save Profile
+			Make Active
+			Import Profile????
+			Export Profile?????
+
 
 
 * ApplicationOptions <Object>
@@ -70,7 +94,7 @@ User options?
 	+ GetPathSettings : <Boolean>
 	+ SetPathSettings : <Boolean>
 
-* ProjectOptions <Object> + IOptionsObject
+* ProjectOptions <Object> + IOptionsObject  ???????? OR NOT DO THIS ONE???
 	- Projects <List of Strings>
 	- CurrentProject <>
 	---
