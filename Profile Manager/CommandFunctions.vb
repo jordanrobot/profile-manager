@@ -9,7 +9,7 @@ Public Module CommandFunctions
     Public Sub startProfileManager()
         'Start up the form
         Dim formMain As New formMain
-
+        formMain.Show()
     End Sub
 
 End Module
