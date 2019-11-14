@@ -1,7 +1,7 @@
 <Addin Type="Standard">
   <!--Created for Autodesk Inventor 2018 (Version 22.0)-->
-  <ClassId>{0e2dd136-7bbd-4220-83b7-26f21069ee0a}</ClassId>
-  <ClientId>{0e2dd136-7bbd-4220-83b7-26f21069ee0a}</ClientId>
+  <ClassId>{5CA5601B-9249-4D6D-BB01-4D241B85E8F9}</ClassId>
+  <ClientId>{5CA5601B-9249-4D6D-BB01-4D241B85E8F9}</ClientId>
   <DisplayName>Profile_Manager</DisplayName>
   <Description>Profile_Manager</Description>
   <Assembly>Profile_Manager.dll</Assembly>

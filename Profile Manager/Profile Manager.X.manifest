@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
   <assemblyIdentity name="Profile_Manager" version="1.0.0.0"></assemblyIdentity>
-  <clrClass clsid="{0e2dd136-7bbd-4220-83b7-26f21069ee0a}" progid="Profile_Manager.StandardAddInServer" threadingModel="Both" name="Profile_Manager.Profile_Manager.StandardAddInServer" runtimeVersion=""></clrClass>
+  <clrClass clsid="{5CA5601B-9249-4D6D-BB01-4D241B85E8F9}" progid="Profile_Manager.StandardAddInServer" threadingModel="Both" name="Profile_Manager.Profile_Manager.StandardAddInServer" runtimeVersion=""></clrClass>
   <file name="Profile_Manager.dll" hashalg="SHA1"></file>
 </assembly>

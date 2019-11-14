@@ -56,7 +56,6 @@ Namespace Profile_Manager
                 MsgBox("Unexpected failure in the activation of the add-in ""Profile_Manager""" & vbCrLf & vbCrLf & ex.Message)
             End Try
 
-            test()
         End Sub
 
         ' This method is called by Inventor when the AddIn is unloaded. The AddIn will be
@@ -134,7 +133,7 @@ Namespace Profile_Manager
     End Class
 End Namespace
 
-
+'old GUID ae609de0-fde8-4eba-8689-a628032e96e6
 Public Module Globals
     ' Inventor application object.
     Public g_inventorApplication As Inventor.Application
@@ -142,6 +141,7 @@ Public Module Globals
     ' The unique ID for this add-in.  If this add-in is copied to create a new add-in
     ' you need to update this ID along with the ID in the .manifest file, the .addin file
     ' and create a new ID for the typelib GUID in AssemblyInfo.vb
-    Public Const g_simpleAddInClientID As String = "0e2dd136-7bbd-4220-83b7-26f21069ee0a"
+    'Old GUID 0e2dd136-7bbd-4220-83b7-26f21069ee0a
+    Public Const g_simpleAddInClientID As String = "5CA5601B-9249-4D6D-BB01-4D241B85E8F9"
     Public Const g_addInClientID As String = "{" & g_simpleAddInClientID & "}"
 End Module
