@@ -99,6 +99,7 @@
     <Compile Include="formMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PartOptionsWrapper.vb" />
     <Compile Include="ProfileObject.vb" />
     <Compile Include="SaveOptionsWrapper.vb" />
     <Compile Include="Sketch3DOptionsWrapper.vb" />

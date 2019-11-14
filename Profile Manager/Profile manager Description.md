@@ -94,7 +94,7 @@ Option Groups
 * [X] HardwareOptions
 * [X] iFeatureOptions
 * [X] NotebookOptions
-* [ ] PartOptions
+* [X] PartOptions
 * [X] SaveOptions
 * [X] Sketch3DOptions
 * [X] SketchOptions

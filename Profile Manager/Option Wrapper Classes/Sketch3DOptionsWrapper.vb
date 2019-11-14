@@ -6,10 +6,10 @@
 
     End Sub
 
-    Public Sub GetOptions(ByRef i As Inventor.DisplayOptions)
+    Public Sub GetOptions(ByRef i As Object)
         options.Clear()
 
-        Me.options.Add("AutoBendWithLineCreation", i.AreTexturesOn)
+        Me.options.Add("AutoBendWithLineCreation", i.AutoBendWithLineCreation)
 
     End Sub
 
