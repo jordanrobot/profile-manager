@@ -4,8 +4,8 @@
 
     Private _CCOptionsWrapper As CCOptionsWrapper
     Private _GeneralOptionsWrapper As GeneralOptionsWrapper
-    'Private _DisplayOptions As DisplayOptions
-    'Private _DrawingOption As DrawingOptions
+    Private _DisplayOptions As DisplayOptionsWrapper
+    Private _DrawingOption As DrawingOptionsWrapper
     'Private _FilesOptions As FileOptions
     'Private _HardwareOptions As HardwareOptions
     'Private _iFeatureOptions As iFeatureOptions
@@ -19,11 +19,17 @@
 
     Public Sub New(ByVal Name As String)
 
+        Me.GetOptions()
         ' code here
 
     End Sub
 
     Public Sub GetOptions()
+        _CCOptionsWrapper.GetOptions(g_inventorApplication)
+        _GeneralOptionsWrapper.GetOptions(g_inventorApplication)
+        _DisplayOptions.GetOptions(g_inventorApplication)
+        _DrawingOption.GetOptions(g_inventorApplication)
+        g_inventorApplication.
 
     End Sub
 
