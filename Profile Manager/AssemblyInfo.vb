@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Profile Manager")>
 <Assembly: AssemblyDescription("Profile Manager")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyCompany("Blue Box Design")>
 <Assembly: AssemblyProduct("")>
-<Assembly: AssemblyCopyright("")>
+<Assembly: AssemblyCopyright("2019")>
 <Assembly: AssemblyTrademark("")>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
