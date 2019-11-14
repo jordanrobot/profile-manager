@@ -7,7 +7,7 @@
     <ProjectGuid>{0E2DD136-7BBD-4220-83B7-26F21069EE0A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>ProfileManager</RootNamespace>
-    <AssemblyName>Profile Manager</AssemblyName>
+    <AssemblyName>ProfileManager</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -18,7 +18,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Profile Manager.xml</DocumentationFile>
+    <DocumentationFile>ProfileManager.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42353,42020,42021,42022,42354,42355</NoWarn>
     <RegisterForComInterop>false</RegisterForComInterop>
     <Prefer32Bit>false</Prefer32Bit>
@@ -30,7 +30,7 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <DocumentationFile>Profile Manager.xml</DocumentationFile>
+    <DocumentationFile>ProfileManager.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42353,42020,42021,42022,42354,42355</NoWarn>
     <DebugType>none</DebugType>
     <RegisterForComInterop>false</RegisterForComInterop>
@@ -118,8 +118,8 @@
     <None Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ProfileManagerButton\SampleButton\32x32.png" />
-    <None Include="ProfileManagerButton\SampleButton\16x16.png" />
+    <None Include="ButtonResources\SampleButton\32x32.png" />
+    <None Include="ButtonResources\SampleButton\16x16.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="My Project\" />
