@@ -91,10 +91,9 @@ Option Groups
 * [X] DrawingOptions
 * [X] FileOptions
 * [X] GeneralOptions
-* [ ] HardwareOptions
-* [ ] iFeatureOptions
-* [ ] InventorVBAProjects???
-* [ ] NotebookOptions
+* [X] HardwareOptions
+* [X] iFeatureOptions
+* [X] NotebookOptions
 * [ ] PartOptions
 * [ ] SaveOptions
 * [ ] Sketch3DOptions

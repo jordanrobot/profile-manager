@@ -86,6 +86,8 @@
     <Compile Include="AssemblyInfo.vb" />
     <Compile Include="DisplayOptionsWrapper.vb" />
     <Compile Include="CCOptionsWrapper.vb" />
+    <Compile Include="NotebookOptionsWrapper.vb" />
+    <Compile Include="iFeatureOptionsWrapper.vb" />
     <Compile Include="HardwareOptionsWrapper.vb" />
     <Compile Include="FileOptionsWrapper.vb" />
     <Compile Include="DrawingOptionsWrapper.vb" />

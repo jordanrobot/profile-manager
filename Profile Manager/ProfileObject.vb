@@ -8,8 +8,8 @@
     Private _DrawingOption As DrawingOptionsWrapper
     Private _FileOptions As FileOptionsWrapper
     Private _HardwareOptions As HardwareOptionsWrapper
-    'Private _iFeatureOptions As iFeatureOptionsWrapper
-    'Private _NotebookOptions As NotebookOptionsWrapper
+    Private _iFeatureOptions As iFeatureOptionsWrapper
+    Private _NotebookOptions As NotebookOptionsWrapper
     'Private _PartOptions As PartOptionsWrapper
     'Private _SaveOptions As SaveOptionsWrapper
     'Private _Sketch3DOptions As Sketch3DOptionsWrapper
@@ -30,8 +30,9 @@
         _DisplayOptions.GetOptions(g_inventorApplication)
         _DrawingOption.GetOptions(g_inventorApplication)
         _FileOptions.GetOptions(g_inventorApplication)
-
+        _iFeatureOptions.GetOptions(g_inventorApplication)
         _HardwareOptions.GetOptions(g_inventorApplication)
+        _NotebookOptions.GetOptions(g_inventorApplication)
 
     End Sub
 
