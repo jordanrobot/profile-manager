@@ -1,7 +1,23 @@
 Profile manager
 ===
 
-Create an add-in that allows the Inventor User to create settings "profiles".  These are akin to profiles from autocad.  This may be useful for users who are freelance inventor users who have to use the software to match client configurations.
+An Autodesk Inventor add-in that allows the user to create and manage settings "profiles"; these are akin to profiles in Autocad.
+
+#### Why would I use this?
+
+* As a freelancer, set up profiles for different clients, where each client provides ifeature libraries, specific settings, ilogic paths, default vba project, etc
+* Load seperate sets of project files, say for clients, or 
+* Set up different profiles for performance reasons.  E.g.
+  * presentations and high-quality reviews,
+  * optimized performance,
+  * Enable performance settings when on battery power, or plugged into an egpu.
+* Set up profiles for different users on the same windows or autodesk login.
+
+    But inventor lets me import and export my application settings.  Why not use that?
+
+This tool is quicker to use, and manages the profile locations for you; no more digging into folders to find the xml files to import or export.  It's as easy as opening the Profile Manager dialogue and selecting the profile you want to use.  This tool also manages ilogic configuration paths, something the Application Options import/export does not do.
+
+#### Usage
 
 * User configures Inventor as required.  This can include:  
 	* Application Options
@@ -25,7 +41,8 @@ Structure
 user opens the profile manager dialog
 
 where are these profiles stored?  How are they accessed?
-	Store into Inventor's options xml file?  Or serialize seperately?
+	Store into Inventor's options xml file?
+    Or serialize seperately?
 
 Each is created as a profile object, they are stored in a profile object collection.
 Where is this data stored across user sessions?  How is it serialized?
@@ -42,8 +59,6 @@ Data Load object
 	+ Add
 	+ Remove
 	+ Name (return profile by name)
-
-
 
 
 * Profile <Object>
