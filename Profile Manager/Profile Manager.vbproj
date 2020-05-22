@@ -87,6 +87,9 @@
     <Compile Include="Wrappers\CcLibraries.vb" />
     <Compile Include="Wrappers\DisplayOptions.vb" />
     <Compile Include="Wrappers\CCOptions.vb" />
+    <Compile Include="Wrappers\FileOpenOptions.vb" />
+    <Compile Include="Wrappers\GripSnapOptions.vb" />
+    <Compile Include="Wrappers\HeadsUpDisplayOptions.vb" />
     <Compile Include="Wrappers\NotebookOptions.vb" />
     <Compile Include="Wrappers\iFeatureOptions.vb" />
     <Compile Include="Wrappers\HardwareOptions.vb" />
@@ -105,6 +108,7 @@
     <Compile Include="ProfileCollection.vb" />
     <Compile Include="Wrappers\SaveOptions.vb" />
     <Compile Include="Wrappers\Sketch3DOptions.vb" />
+    <Compile Include="Wrappers\SketchConstraintSettings.vb" />
     <Compile Include="Wrappers\SketchOptions.vb" />
     <Compile Include="Utilities.vb" />
     <Compile Include="StandardAddInServer.vb" />
