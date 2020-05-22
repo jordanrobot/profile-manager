@@ -1,6 +1,6 @@
 ﻿Imports Inventor
 
-Public Class DrawingOptionsWrapper
+Public Class DrawingOptions
 
     Public options As New Hashtable
 

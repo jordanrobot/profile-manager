@@ -1,19 +1,21 @@
-﻿Public Class ProfileObject
+﻿Imports ProfileManager.Wrappers
+
+Public Class ProfileObject
 
     Public Name As String
 
-    Private _CCOptions As CCOptionsWrapper
-    Private _GeneralOptions As GeneralOptionsWrapper
-    Private _DisplayOptions As DisplayOptionsWrapper
-    Private _DrawingOption As DrawingOptionsWrapper
-    Private _FileOptions As FileOptionsWrapper
-    Private _HardwareOptions As HardwareOptionsWrapper
-    Private _iFeatureOptions As iFeatureOptionsWrapper
-    Private _NotebookOptions As NotebookOptionsWrapper
-    Private _PartOptions As PartOptionsWrapper
-    Private _SaveOptions As SaveOptionsWrapper
-    Private _Sketch3DOptions As Sketch3DOptionsWrapper
-    Private _SketchOptions As SketchOptionsWrapper
+    Private _CCOptions As CCOptions
+    Private _GeneralOptions As GeneralOptions
+    Private _DisplayOptions As DisplayOptions
+    Private _DrawingOption As DrawingOptions
+    Private _FileOptions As FileOptions
+    Private _HardwareOptions As HardwareOptions
+    Private _iFeatureOptions As iFeatureOptions
+    Private _NotebookOptions As NotebookOptions
+    Private _PartOptions As PartOptions
+    Private _SaveOptions As SaveOptions
+    Private _Sketch3DOptions As Sketch3DOptions
+    Private _SketchOptions As SketchOptions
     'Private _IlogicPathSettings As iLogicPathSettingsWrapper
     'Private _ProjectOptions As ProjectOptionsWrapper
 

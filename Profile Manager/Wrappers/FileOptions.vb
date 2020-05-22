@@ -1,6 +1,6 @@
 ﻿Imports Inventor
 
-Public Class FileOptionsWrapper
+Public Class FileOptions
 
     Public options As New Hashtable
     Public fileOpenOptions As New Hashtable
