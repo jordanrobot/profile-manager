@@ -1,7 +1,4 @@
-﻿Imports Inventor
-
-Namespace Wrappers
-
+﻿Namespace Wrappers
     Public Class SaveOptions
         Inherits Wrappers.OptionWrapper
 
