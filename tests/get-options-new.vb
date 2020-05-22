@@ -1,7 +1,7 @@
 ﻿Imports ProfileManager
 Imports Inventor
 
-Public Module test
+'Public Module test
 
     Public Sub Main()
 
@@ -48,6 +48,13 @@ Public Module test
         Next
 
         msgbox(options("ViewPreview"))
+
+    'Public Sub SetOptions(ByRef i As Inventor.ContentCenterOptions)
+
+
+        For Each k In options.Keys
+            CallByName(i, k, CallType.Let, options(k))
+        Next
 
 
     End Sub
