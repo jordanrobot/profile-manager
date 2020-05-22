@@ -84,14 +84,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.vb" />
-    <Compile Include="DisplayOptionsWrapper.vb" />
-    <Compile Include="CCOptionsWrapper.vb" />
-    <Compile Include="NotebookOptionsWrapper.vb" />
-    <Compile Include="iFeatureOptionsWrapper.vb" />
-    <Compile Include="HardwareOptionsWrapper.vb" />
-    <Compile Include="FileOptionsWrapper.vb" />
-    <Compile Include="DrawingOptionsWrapper.vb" />
-    <Compile Include="GeneralOptionsWrapper.vb" />
+    <Compile Include="Wrappers\CcLibraries.vb" />
+    <Compile Include="Wrappers\DisplayOptions.vb" />
+    <Compile Include="Wrappers\CCOptions.vb" />
+    <Compile Include="Wrappers\NotebookOptions.vb" />
+    <Compile Include="Wrappers\iFeatureOptions.vb" />
+    <Compile Include="Wrappers\HardwareOptions.vb" />
+    <Compile Include="Wrappers\FileOptions.vb" />
+    <Compile Include="Wrappers\DrawingOptions.vb" />
+    <Compile Include="Wrappers\GeneralOptions.vb" />
     <Compile Include="CommandFunctions.vb" />
     <Compile Include="formMain.Designer.vb">
       <DependentUpon>formMain.vb</DependentUpon>
@@ -99,14 +100,15 @@
     <Compile Include="formMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PartOptionsWrapper.vb" />
+    <Compile Include="Wrappers\PartOptions.vb" />
     <Compile Include="ProfileObject.vb" />
     <Compile Include="ProfileCollection.vb" />
-    <Compile Include="SaveOptionsWrapper.vb" />
-    <Compile Include="Sketch3DOptionsWrapper.vb" />
-    <Compile Include="SketchOptionsWrapper.vb" />
+    <Compile Include="Wrappers\SaveOptions.vb" />
+    <Compile Include="Wrappers\Sketch3DOptions.vb" />
+    <Compile Include="Wrappers\SketchOptions.vb" />
     <Compile Include="Utilities.vb" />
     <Compile Include="StandardAddInServer.vb" />
+    <Compile Include="Wrappers\OptionWrapper.vb" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Profile Manager TODO.md" />
