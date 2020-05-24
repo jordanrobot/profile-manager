@@ -1,6 +1,7 @@
 ﻿Imports ProfileManager.Wrappers
 
-Public Class ProfileObject
+<Serializable()>
+Public Class Profile
 
     Public Name As String
 
@@ -9,7 +10,7 @@ Public Class ProfileObject
     Private _DisplayOptions As DisplayOptions
     Private _DrawingOption As DrawingOptions
     Private _fileOpenOptions As FileOpenOptions
-    Private _FileOptions As FileOptions
+    Private _FileOptions As Wrappers.FileOptions
     Private _GeneralOptions As GeneralOptions
     Private _gripSnapOptions As GripSnapOptions
     Private _HardwareOptions As HardwareOptions
@@ -30,6 +31,11 @@ Public Class ProfileObject
         Me.GetOptions()
         ' code here
 
+    End Sub
+
+    Public Sub New()
+        'Throw New NotImplementedException
+        GetOptions()
     End Sub
 
     Public Sub GetOptions()
