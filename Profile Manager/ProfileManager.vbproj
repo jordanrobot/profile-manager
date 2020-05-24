@@ -104,7 +104,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Wrappers\PartOptions.vb" />
-    <Compile Include="ProfileObject.vb" />
+    <Compile Include="Profile.vb" />
     <Compile Include="ProfileCollection.vb" />
     <Compile Include="Wrappers\SaveOptions.vb" />
     <Compile Include="Wrappers\Sketch3DOptions.vb" />
@@ -155,7 +155,7 @@
 call "%25VS150COMNTOOLS%25\VsDevCmd"
 
 REM - Embed the manifest into the dll.
-mt.exe -manifest "$(ProjectDir)$(TargetName).X.manifest" -outputresource:"$(TargetPath)";#2
+"C:\Program Files (x86)\Windows Kits\10\bin\x64\mt.exe" -manifest "$(ProjectDir)$(TargetName).X.manifest" -outputresource:"$(TargetPath)";#2
 
 REM - Copy the .addin file and the ButtonResources folder into the result folder.
 XCopy "$(ProjectDir)Autodesk.$(TargetName).Inventor.addin" "$(TargetDir)" /y
