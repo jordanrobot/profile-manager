@@ -109,9 +109,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Profile Manager\Profile Manager.vbproj">
+    <ProjectReference Include="..\Profile Manager\ProfileManager.vbproj">
       <Project>{0e2dd136-7bbd-4220-83b7-26f21069ee0a}</Project>
-      <Name>Profile Manager</Name>
+      <Name>ProfileManager</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
