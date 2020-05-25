@@ -88,7 +88,8 @@ Data Load object
 			Import Profile????
 			Export Profile?????
 
-
+* Inventor.SpellCheckOptions
+	- Add this!!!
 
 * ApplicationOptions <Object>
 	+ List as a hash-table (different types?)

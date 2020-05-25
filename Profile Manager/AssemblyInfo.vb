@@ -29,3 +29,4 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 
 <Assembly: AssemblyVersion("0.0.*")>
+<Assembly: ComVisible(true)>

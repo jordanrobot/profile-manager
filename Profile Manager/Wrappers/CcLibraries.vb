@@ -1,4 +1,5 @@
 ﻿Namespace Wrappers
+    <Serializable()>
     Public Class CcLibraries
 
         Private _accessOption As Inventor.ContentCenterAccessOptionEnum
