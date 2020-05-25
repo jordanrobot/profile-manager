@@ -116,12 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Profile Manager TODO.md" />
-    <None Include="Profile Manager.X.manifest" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Autodesk.Profile Manager.Inventor.addin" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ProfileManager.X.manifest" />
     <None Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
