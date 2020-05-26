@@ -104,7 +104,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Wrappers\PartOptions.vb" />
-    <Compile Include="ProfileObject.vb" />
+    <Compile Include="Profile.vb" />
     <Compile Include="ProfileCollection.vb" />
     <Compile Include="Wrappers\SaveOptions.vb" />
     <Compile Include="Wrappers\Sketch3DOptions.vb" />
@@ -116,12 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Profile Manager TODO.md" />
-    <None Include="Profile Manager.X.manifest" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Autodesk.Profile Manager.Inventor.addin" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ProfileManager.X.manifest" />
     <None Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -151,24 +151,38 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>REM - Set up the environment.
+    <PostBuildEvent>if $(ConfigurationName) == Debug GOTO build
+if $(ConfigurationName) == Release GOTO build
+if $(ConfigurationName) == ilogic GOTO ilogicCompile
+
+GOTO end
+
+:build
+REM # (1) Set up the environment.
 call "%25VS150COMNTOOLS%25\VsDevCmd"
 
-REM - Embed the manifest into the dll.
+REM # (2) Embed the manifest into the dll.
 "C:\Program Files (x86)\Windows Kits\10\bin\x64\mt.exe" -manifest "$(ProjectDir)$(TargetName).X.manifest" -outputresource:"$(TargetPath)";#2
 
-REM - Copy the .addin file and the ButtonResources folder into the result folder.
+REM # (3) Copy the .addin file and the ButtonResources folder into the result folder.
 XCopy "$(ProjectDir)Autodesk.$(TargetName).Inventor.addin" "$(TargetDir)" /y
 XCopy "$(ProjectDir)ButtonResources" "$(TargetDir)ButtonResources" /y /r /i /s /f
 
-REM - Delete the pdb file because it doesn't need to be delivered.
+REM # (4) Delete the pdb file because it doesn't need to be delivered.
 DEL "$(TargetDir)$(TargetName).pdb"
 
-REM - Delete the existing add-in folder.
+REM # (5) Delete the existing add-in folder.
 rmdir /q /s "C:\ProgramData\Autodesk\Inventor Addins\$(TargetName)"
 
-REM - Copy the folder to the Inventor Addins folder so Inventor will see it and run it.
+REM # (6) Copy the folder to the Inventor Addins folder so Inventor will see it and run it.
 XCopy "$(TargetDir)*" "%25appdata%25\Autodesk\ApplicationPlugins\$(TargetName)\" /y /r /i /s /f
+
+GOTO end
+
+:ilogicCompile
+
+
+:end
 </PostBuildEvent>
   </PropertyGroup>
 </Project>

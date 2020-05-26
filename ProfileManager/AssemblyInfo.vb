@@ -8,8 +8,8 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Profile Manager")>
-<Assembly: AssemblyDescription("Profile Manager")>
+<Assembly: AssemblyTitle("ProfileManager")>
+<Assembly: AssemblyDescription("A tool for manipulating groups of Autodesk Inventor settings.")>
 <Assembly: AssemblyCompany("Blue Box Design")>
 <Assembly: AssemblyProduct("")>
 <Assembly: AssemblyCopyright("2019")>
