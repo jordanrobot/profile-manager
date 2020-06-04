@@ -1,54 +1,88 @@
 ﻿Imports ProfileManager
 
 Public Class ProfileCollection
-    Implements System.Collections.Generic.ICollection(Of Profile)
+    Implements System.Collections.Generic.IDictionary(Of String, Profile)
 
-    Private _profileList As List(Of Profile)
+    Private _profiles As Dictionary(Of String, Profile) = New Dictionary(Of String,Profile)()
+    Public CurrentProfile As Profile
 
-    Public ReadOnly Property Count As Integer Implements ICollection(Of Profile).Count
+    Public Sub Add(name As String, item As Profile) Implements IDictionary(Of String, Profile).Add
+        _profiles.Add(name, item)
+    End Sub
+
+    Public ReadOnly Property Count As Integer Implements IDictionary(Of String, Profile).Count
         Get
             'Throw New NotImplementedException()
-            Count = _profileList.Count
+            Count = _profiles.Count
         End Get
     End Property
 
-    Public ReadOnly Property IsReadOnly As Boolean Implements ICollection(Of Profile).IsReadOnly
+    Public ReadOnly Property IsReadOnly As Boolean Implements IDictionary(Of String, Profile).IsReadOnly
         Get
             Throw New NotImplementedException()
         End Get
     End Property
 
-    Public Sub Add(item As Profile) Implements ICollection(Of Profile).Add
-        'Throw New NotImplementedException()
-        _profileList.Add(item)
-    End Sub
+    Default Public Property Item(key As String) As Profile Implements IDictionary(Of String, Profile).Item
+        Get
+            Throw New NotImplementedException()
+        End Get
+        Set(value As Profile)
+            Throw New NotImplementedException()
+        End Set
+    End Property
 
-    Public Sub Clear() Implements ICollection(Of Profile).Clear
-        '       _profileList.Clear()
+    Public ReadOnly Property Keys As ICollection(Of String) Implements IDictionary(Of String, Profile).Keys
+        Get
+            Return _profiles.Keys
+            'Throw New NotImplementedException()
+        End Get
+    End Property
+
+    Public ReadOnly Property Values As ICollection(Of Profile) Implements IDictionary(Of String, Profile).Values
+        Get
+            Throw New NotImplementedException()
+        End Get
+    End Property
+
+    Public Sub Clear() Implements IDictionary(Of String, Profile).Clear
+        _profiles.Clear()
         Throw New NotImplementedException()
     End Sub
 
-    Public Sub CopyTo(array() As Profile, arrayIndex As Integer) Implements ICollection(Of Profile).CopyTo
+    Public Function ContainsKey(key As String) As Boolean Implements IDictionary(Of String, Profile).ContainsKey
+        Throw New NotImplementedException()
+    End Function
+
+    Public Function Remove(key As String) As Boolean Implements IDictionary(Of String, Profile).Remove
+        Throw New NotImplementedException()
+    End Function
+
+    Public Function TryGetValue(key As String, ByRef value As Profile) As Boolean Implements IDictionary(Of String, Profile).TryGetValue
+        Throw New NotImplementedException()
+    End Function
+
+    Public Sub Add(item As KeyValuePair(Of String, Profile)) Implements ICollection(Of KeyValuePair(Of String, Profile)).Add
         Throw New NotImplementedException()
     End Sub
 
-    Public Function Contains(item As Profile) As Boolean Implements ICollection(Of Profile).Contains
-        'Throw New NotImplementedException()
-        Return _profileList.Contains(item)
+    Public Function Contains(item As KeyValuePair(Of String, Profile)) As Boolean Implements ICollection(Of KeyValuePair(Of String, Profile)).Contains
+        Throw New NotImplementedException()
     End Function
 
-    Public Function Remove(item As Profile) As Boolean Implements ICollection(Of Profile).Remove
-        'Throw New NotImplementedException()
-        _profileList.Remove(item)
+    Public Sub CopyTo(array() As KeyValuePair(Of String, Profile), arrayIndex As Integer) Implements ICollection(Of KeyValuePair(Of String, Profile)).CopyTo
+        Throw New NotImplementedException()
+    End Sub
+
+    Public Function Remove(item As KeyValuePair(Of String, Profile)) As Boolean Implements ICollection(Of KeyValuePair(Of String, Profile)).Remove
+        Throw New NotImplementedException()
     End Function
 
-    Public Function GetEnumerator() As IEnumerator(Of Profile) Implements IEnumerable(Of Profile).GetEnumerator
-        'Throw New NotImplementedException()
-        _profileList.GetEnumerator()
+    Public Function GetEnumerator() As IEnumerator(Of KeyValuePair(Of String, Profile)) Implements IEnumerable(Of KeyValuePair(Of String, Profile)).GetEnumerator
+        Throw New NotImplementedException()
     End Function
 
     Private Function IEnumerable_GetEnumerator() As IEnumerator Implements IEnumerable.GetEnumerator
         Throw New NotImplementedException()
     End Function
-
 End Class

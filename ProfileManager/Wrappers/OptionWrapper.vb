@@ -18,7 +18,7 @@
         End Sub
 
         Public Sub SetOptions(ByRef i As Object)
-            For Each k In options.Keys
+            For Each k As String In options.Keys
                 Try
                     CallByName(i, k, CallType.Let, options(k))
                 Catch

@@ -28,7 +28,6 @@
                                          "StartupActionType",
                                          "StartupProjectFileName",
                                          "StartupHelpFocusTopic",
-                                         "StartupNewFileTemplateName",
                                          "TextAppearance",
                                          "TextSize",
                                          "ToleranceValue",

@@ -4,7 +4,7 @@
         Inherits OptionWrapper
         
         '2019
-        Private _names As List(Of String) = _
+        Public _names As List(Of String) = _
                     New List(Of String)({"CheckFamiliesUpdates",
                                          "CustomFamilyAsStandard",
                                          "RefreshOutOfDateStandardParts"})

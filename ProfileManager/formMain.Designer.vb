@@ -66,7 +66,6 @@ Partial Class formMain
         '
         'btnExport
         '
-        Me.btnExport.Enabled = false
         Me.btnExport.Location = New System.Drawing.Point(164, 126)
         Me.btnExport.Margin = New System.Windows.Forms.Padding(2)
         Me.btnExport.Name = "btnExport"

@@ -5,32 +5,33 @@ Imports ProfileManager.Wrappers
 <Serializable()>
 Public Class Profile
 
-    Public Name As String
+    Public Name As String = New String("")
 
-    Private _ccLibraries As CcLibraries = New CcLibraries()
-    Private _ccOptions As CCOptions = New CCOptions()
-    Private _DisplayOptions As Wrappers.DisplayOptions = New Wrappers.DisplayOptions()
-    Private _DrawingOption As Wrappers.DrawingOptions = New Wrappers.DrawingOptions()
-    Private _fileOpenOptions As Wrappers.FileOpenOptions = New Wrappers.FileOpenOptions()
-    Private _FileOptions As Wrappers.FileOptions = New Wrappers.FileOptions()
-    Private _GeneralOptions As Wrappers.GeneralOptions = New Wrappers.GeneralOptions()
-    Private _gripSnapOptions As Wrappers.GripSnapOptions = New Wrappers.GripSnapOptions()
-    Private _HardwareOptions As Wrappers.HardwareOptions = New Wrappers.HardwareOptions()
-    Private _headsUpDisplayOptions As Wrappers.HeadsUpDisplayOptions = New Wrappers.HeadsUpDisplayOptions()
-    Private _iFeatureOptions As Wrappers.iFeatureOptions = New Wrappers.iFeatureOptions()
-    Private _notebookOptions As Wrappers.NotebookOptions = New Wrappers.NotebookOptions()
-    Private _partOptions As Wrappers.PartOptions = New Wrappers.PartOptions()
-    Private _SaveOptions As Wrappers.SaveOptions = New Wrappers.SaveOptions()
-    Private _Sketch3DOptions As Wrappers.Sketch3DOptions = New Wrappers.Sketch3DOptions()
-    Private _sketchConstraintSettings As Wrappers.SketchConstraintSettings = New Wrappers.SketchConstraintSettings()
-    Private _SketchOptions As Wrappers.SketchOptions = New Wrappers.SketchOptions()
+    Public _ccLibraries As CcLibraries = New CcLibraries()
+    Public _ccOptions As CCOptions = New CCOptions()
+    Public _DisplayOptions As Wrappers.DisplayOptions = New Wrappers.DisplayOptions()
+    Public _DrawingOption As Wrappers.DrawingOptions = New Wrappers.DrawingOptions()
+    Public _fileOpenOptions As Wrappers.FileOpenOptions = New Wrappers.FileOpenOptions()
+    Public _FileOptions As Wrappers.FileOptions = New Wrappers.FileOptions()
+    Public _GeneralOptions As Wrappers.GeneralOptions = New Wrappers.GeneralOptions()
+    Public _gripSnapOptions As Wrappers.GripSnapOptions = New Wrappers.GripSnapOptions()
+    Public _HardwareOptions As Wrappers.HardwareOptions = New Wrappers.HardwareOptions()
+    Public _headsUpDisplayOptions As Wrappers.HeadsUpDisplayOptions = New Wrappers.HeadsUpDisplayOptions()
+    Public _iFeatureOptions As Wrappers.iFeatureOptions = New Wrappers.iFeatureOptions()
+    Public _notebookOptions As Wrappers.NotebookOptions = New Wrappers.NotebookOptions()
+    Public _partOptions As Wrappers.PartOptions = New Wrappers.PartOptions()
+    Public _SaveOptions As Wrappers.SaveOptions = New Wrappers.SaveOptions()
+    Public _Sketch3DOptions As Wrappers.Sketch3DOptions = New Wrappers.Sketch3DOptions()
+    Public _sketchConstraintSettings As Wrappers.SketchConstraintSettings = New Wrappers.SketchConstraintSettings()
+    Public _SketchOptions As Wrappers.SketchOptions = New Wrappers.SketchOptions()
 
     'Private _IlogicPathSettings As iLogicPathSettingsWrapper
     'Private _ProjectOptions As ProjectOptionsWrapper
 
-    Public Sub New(ByVal Name As String)
+    Public Sub New(ByVal _name As String)
 
-        Me.GetOptions()
+        Name = _name
+        GetOptions()
         ' code here
 
     End Sub
@@ -38,7 +39,7 @@ Public Class Profile
     Public Sub New()
 '        'Throw New NotImplementedException
         GetOptions()
-        Name = DateTimeOffset.UtcNow.Ticks
+        Name = DateTimeOffset.UtcNow.Ticks.ToString
     End Sub
 
     Public Sub GetOptions()
@@ -50,23 +51,23 @@ Public Class Profile
         'End Try
         'Try
             _ccLibraries.GetOptions(i.ContentCenterOptions)
-            _ccOptions.GetOptions(i)
-            _DisplayOptions.GetOptions(i)
-            _DrawingOption.GetOptions(i)
-            _fileOpenOptions.GetOptions(i)
-            _FileOptions.GetOptions(i)
-            _GeneralOptions.GetOptions(i)
+            _ccOptions.GetOptions(i.ContentCenterOptions)
+            _DisplayOptions.GetOptions(i.DisplayOptions)
+            _DrawingOption.GetOptions(i.DrawingOptions)
+            _fileOpenOptions.GetOptions(i.FileOptions.FileOpenOptions)
+            _FileOptions.GetOptions(i.FileOptions)
+            _GeneralOptions.GetOptions(i.GeneralOptions)
             _GeneralOptions.GetOptions2(i)
-            _gripSnapOptions.GetOptions(i)
-            _headsUpDisplayOptions.GetOptions(i)
-            _iFeatureOptions.GetOptions(i)
-            _HardwareOptions.GetOptions(i)
-            _notebookOptions.GetOptions(i)
-            _partOptions.GetOptions(i)
-            _SaveOptions.GetOptions(i)
-            _SketchOptions.GetOptions(i)
-            _sketchConstraintSettings.GetOptions(i)
-            _Sketch3DOptions.GetOptions(i)
+            _gripSnapOptions.GetOptions(i.GeneralOptions.GripSnapOptions)
+            '_headsUpDisplayOptions.GetOptions(i.HeadsUpDisplayOptions)
+            _iFeatureOptions.GetOptions(i.iFeatureOptions)
+            _HardwareOptions.GetOptions(i.HardwareOptions)
+            _notebookOptions.GetOptions(i.NotebookOptions)
+            _partOptions.GetOptions(i.PartOptions)
+            _SaveOptions.GetOptions(i.SaveOptions)
+            _SketchOptions.GetOptions(i.SketchOptions)
+            _sketchConstraintSettings.GetOptions(i.SketchOptions.SketchConstraintSettings)
+            _Sketch3DOptions.GetOptions(i.Sketch3DOptions)
         'Catch ex As SystemException
         '    MessageBox.Show("The GetOptions routine was interrupted.  Not all options could be retreived.")
         'End Try
