@@ -36,7 +36,7 @@ Public Class formMain
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim newProfile As Profile = New Profile("test")
+        Dim newProfile As Profile = New Profile(_profileCollection.DefaultName)
         _profileCollection.Add(newProfile.Name, newProfile)
         _profileCollection.CurrentProfile = newProfile
 

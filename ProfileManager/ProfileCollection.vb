@@ -6,6 +6,23 @@ Public Class ProfileCollection
     Private _profiles As Dictionary(Of String, Profile) = New Dictionary(Of String,Profile)()
     Public CurrentProfile As Profile
 
+    Public Function DefaultName As String
+        'get the next available profile name
+        Dim _nameRoot As String = "Profile"
+
+        If _profiles.ContainsKey(_nameRoot) = False Then
+            Return _nameRoot
+        End If
+
+        Dim i As Integer
+        For i = 0 to 20
+            If _profiles.ContainsKey(_nameRoot & i) = False Then
+                Return _nameRoot & i
+            End If
+        Next
+
+    End Function
+
     Public Sub Add(name As String, item As Profile) Implements IDictionary(Of String, Profile).Add
         _profiles.Add(name, item)
     End Sub
@@ -85,4 +102,5 @@ Public Class ProfileCollection
     Private Function IEnumerable_GetEnumerator() As IEnumerator Implements IEnumerable.GetEnumerator
         Throw New NotImplementedException()
     End Function
+
 End Class
